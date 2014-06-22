@@ -1,0 +1,2 @@
+基于tornado的一个web展示页面
+前端采用pure+jquery
