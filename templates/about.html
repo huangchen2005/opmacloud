@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>关于我们</h1>
+        </div>
+
+        <div class="content">
+        	<div id="cont" style="display:none;">
+        	    <h2 class="content-subhead">我们存在的意义</h2>
+
+        	    <p>
+				一个网站（互联网门户、电子商务）建设的最终目的是提供网民以及用户浏览与进行工作，因此良好的性能就成为了衡量一个网站用户体验是否是优秀的重要指标。访问性能差的网站会引起网民的强烈反应，通过口口相传的方式会对网站的口碑产生非常大的影响。为了预防事故的发生，网站常常会花费大量的人力物力进行运维管理，这是十分必要的。但大多数网站所涉及运维的相关费用产出不平衡，这样就很难把重心专注于网站内容方面。所以就有了我们的存在…
+				</p>
+
+        	    <h2 class="content-subhead">OPMA是什么？OPMACLOUD又是什么？</h2>
+        	    <p>
+				OPMA(Operation Management)即运维管理是我们根据上述背景所总结的一个概念名词，它涵盖了目前传统IT所涉及的运维服务。另外我们希望将现实与互联网这个“云”的世界相结合，打造出一个属于我们自己运维“云”平台，这就是Opmacloud。
+				</p>
+
+        	    <h2 class="content-subhead">联系我们</h2>
+        	    <p>我们只是几个对未来有着美好愿望的的“屌丝男士”，希望可以通过自己的微薄之力在这个竞争激烈的IT世界中实现我们自身的价值！如果您信任我们，请联系我们吧！</p>
+        	    <p>联系人:黄晨</p>
+        	    <p>联系电话:13811877312</p>
+        	    <p>电子邮箱:huangchen@opmacloud.com</p>
+        	    <p>QQ:6160127</p>
+			</div>
+			{% include footer.html %}
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_about").attr("class","pure-menu-selected");
+</script>
+{% include tongji.html %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>OPMACLOUD</h1>
+		<h2>运维您的网站</h2>
+        </div>
+
+        <div class="content">
+        	<div id="cont" style="display:none;">
+        	    <img class="pure-img-responsive" src="/static/images/problem.png">
+        	    <h2 class="content-subhead">如果您有上述困扰又不想自己花费自己宝贵的时间，请联系我们</h2>
+        	    <h3>我们将为您提供</h3>
+        	    <li>专业的建站指导</li>
+        	    <li>专业的运维服务</li>
+        	    <li>专业的监控服务</li>
+        	    <li>专业的扩展方案</li>
+        	    <li>专业的提速方案</li>
+			</div>
+			{% include footer.html %}
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_home").css("background-color","#1f8dd6");
+</script>
+{% include tongji.html %}
+</body>
+</html>

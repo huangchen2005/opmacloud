@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>服务介绍</h1>
+		<h2>网站加速</h2>
+        </div>
+
+        <div class="content">
+        	{% include features_menu.html %}
+        		<div id="cont" style="display:none;">
+        		<br />
+        		<p>网站加速分为动态内容加速和静态内容加速,其核心内容就是使用缓存。</p>
+				<h2 class="content-subhead">静态内容加速</h2>
+				<h3>使用CDN加速技术</h3>
+				<p>简单来说CDN加速就是把网站的静态内容分发到用户就近的服务器主机节点，并进行智能调控和缓存，使每个用户都能访问到最佳的服务器节点，
+				加快网站的访问速度，提高用户体验。</p>
+				<p>CDN加速可显著提升网站的响应速度和可用性， 让用户在访问网站时获得最佳服务体验，同时降低源站压力，加强源站安全，提高网站访问量，并由良好的用户体验而带来更多的网站利益。</p>
+				<img class="pure-img-responsive" src="/static/images/cdn.png"/>
+
+				<h3>设置页面缓存时间</h3>
+				<p>像图片这种静态文件，一般情况我们不会进行更新，所以可以在Web服务器上将这些文件的过期时间配置的稍微长些，这样用户只有在第一次访问页面时从服务器下载这些静态页面，
+				以后再访问就是从本地读取该页面，速度就会大大提升。</p>
+
+				<h2 class="content-subhead">动态内容加速</h2>
+				<h3>动态脚本加速</h3>
+				<p>对于PHP应用，我们可以使用OPCache插件来加进行加速，OPCache的原理是把PHP执行后的数据缓冲到内存中从而避免重复的编译过程，能够直接使用缓冲区已编译的代码从而提高速度，降低服务器负载。</p>
+				<p>一般来说使用OPCache可以加速PHP应用达到30%，而且最大的优点是不需要更改任何程序代码。可谓是无本万利，强烈推荐大家使用。</p>
+				<h3>使用memcached、redis等缓存技术</h3>
+				<p>如果瓶颈出在数据库端，在做过分库分表后依然无法缓解，可以考虑使用memcached、redis等软件将数据缓存在内存中，程序可以先读取内存中的数据，如未命中再读取数据库中的数据，
+				这样一来就能大大降低数据库的压力。不过这需要研发人员配置来修改程序的逻辑代码，就不在此详细说明了。</p>
+
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_cdn").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

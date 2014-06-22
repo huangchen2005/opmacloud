@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>部署问题</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+				<h2 class="content-subhead">Web服务器的选择</h2>
+				<p>通过前面的介绍，我们基本上选定了租用云主机才承载我们的服务，由于云主机类似一个真实的机器，所以上面的服务都是需要我们自己来配置的。
+				既然是web服务，首先我们需要Web服务器，Web服务器的选择我们一般选用Nginx，因为Nginx性能好，消耗内存少，支持更多并发连接,支持负载均衡和反向代理，
+				我们基本已经用Nginx替代了Apache。</p>
+				<h2 class="content-subhead">应用服务器的选择</h2>
+				<p>应用服务器的选择与应用使用的语言有关。一般热门的Web语言有Java、Php、Python等。</p>
+				<h3>Java</h3>
+				<p>一般情况Java容器我们都用开源的Tomcat，需要注意的是要做好Tomcat的监控，包括Java内存信息的监控。</p>
+				<h3>PHP</h3>
+				<p>如果是PHP程序的话，一般我们用PHP-fpm来进行处理。PHP版本尽量选用最新的版本，别忘了开启opcache,他可以在不改代码的情况下加速PHP站点。</p>
+				<h3>Python</h3>
+				<p>如果您的网站是用Python写成的话，建议您supervisord来管理python进程。</p>
+				<h2 class="content-subhead">数据库的选择</h2>
+				<p>一般情况下我们用的都是Mysql。我们可以选择将Mysql直接搭建在云主机上，也可以选择云服务商的DB服务，这取决于您对性能和价格的要求。
+				</p>
+
+
+				<h2 class="content-subhead">看不懂!!!</h2>
+				<p>问：你说的我完全看不懂，我只想要自己的网站!!!</p>
+				<p>
+				答：我们鼓励自己动手，丰衣足食，您可以通过自己学习相关技术解决各类问题,当然，如果您想把精力放在主要业务上，这些也可以完全交给我们，
+				直接<a href="/about">联系我们</a>，让我们帮您解决一切！
+				</p>
+	 		</div>
+	 		{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_deployment").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>套餐报价</h1>
+        </div>
+
+        <div class="content">
+        	<div id="cont" style="display:none;">
+				<h2 class="content-subhead">基础服务</h2>
+				<table class="pure-table">
+				<thead>
+					<tr>
+						<th width="20%">基础服务项目</th>
+						<th width="15%">价格</th>
+						<th width="35%">内容</th>
+						<th width="30%">备注</th>
+					</tr>
+				</thead>
+				</tbody>
+					<tr>
+						<td >运维基本服务包</td>
+						<td >100元/月 <br/>1000元/年</td>
+						<td >
+							<li>网站日常维护</li>
+							<li>网站数据备份</li>
+							<li>网站补丁、版本升级</li>
+							<li>网站监控和故障恢复</li>
+							<li>云主机CPU、内存等基础监控</li>
+						</td>
+						<td>
+							<li>监控频率为为5分钟</li>
+							<li>此价格不包含云主机的价格,价格详见Ucloud或阿里云官网</li>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h2 class="content-subhead">增值服务</h2>
+				<table class="pure-table">
+				<thead>
+					<tr>
+						<th width="20%">增值服务项目</th>
+						<th width="15%">价格</th>
+						<th width="35%">内容</th>
+						<th width="30%">备注</th>
+					</tr>
+				</thead>
+				</tbody>
+					<tr>
+						<td>详细监控</td>
+						<td>100元/月<br/>1000元/年</td>
+						<td>
+							<li>更精细的服务器性能监控</li>
+							<li>更精细的应用层服务监控</li>						
+						</td>
+						<td>
+							<li>监控频率为1分钟</li>
+							<li>服务器监控包括CPU、内存、磁盘IO、带宽等详细监控</li>						
+							<li>应用监控包括Nginx、PHP、Tomcat、Mysql等</li>						
+						</td>
+					</tr>
+					<tr>
+						<td>预警服务</td>
+						<td>50元/月<br/>500元/年</td>
+						<td>
+							<li>分别提供云主机CPU、内存、磁盘IO、网络带宽等指标的预警信息</li>
+						</td>
+						<td>
+						</td>
+					</tr>
+
+				</tbody>
+				</table>
+
+				<h2 class="content-subhead">一次性服务项目</h2>
+				<table class="pure-table">
+				<thead>
+					<tr>
+						<th width="20%">一次性服务项目</th>
+						<th width="15%">价格</th>
+						<th width="35%">内容</th>
+						<th width="30%">备注</th>
+					</tr>
+				</thead>
+				</tbody>
+					<tr>
+						<td>网站加速服务</td>
+						<td>500元/次</td>
+						<td>
+							<li>提供站内静态元素（如jpg,png等）的第三方加速服务</li>
+						</td>
+						<td>
+							<li>CDN加速是按流量收费，费用为1元/G，该费用为CDN厂商收取</li>
+						</td>
+					</tr>
+					<tr>
+						<td>电商平台搭建</td>
+						<td>500元/次</td>
+						<td>
+							<li>提供EcShop整套环境的搭建</li>
+							<li>Nginx、PHP等参数的调优</li>
+						</td>
+						<td>
+							<li>如将EcShop用于商业用途，需要购买EcShop的商业授权，价格是5000元终身授权。该费用为上海商派收取，如不进行授权，我们不负责处理相关法律问题</li>
+						</td>
+					</tr>
+					<tr>
+						<td>域名申请</td>
+						<td>0元/次</td>
+						<td>
+							<li>免费为您进行域名申请</li>
+							<li>免费为您进行域名配置</li>
+						</td>
+						<td>
+							<li>域名本身购买将收取费用，这个费用是域名提供商收取的</li>
+							<li>我们默认会采用DNSPod来进行域名解析服务</li>
+						</td>
+					</tr>
+					<tr>
+						<td>网站备案</td>
+						<td>0元/次</td>
+						<td>
+							<li>免费为您进行域名备案</li>
+						</td>
+						<td>
+							<li>备案时间较长，请您耐心等候</li>
+						</td>
+					</tr>
+					<tr>
+						<td>空间扩容</td>
+						<td>100元/次</td>
+						<td>
+							<li>对网站存储空间进行扩容</li>
+						</td>
+						<td>
+							<li>该费用为维护费，空间扩容价格见云厂商报价</li>
+						</td>
+					</tr>
+					<tr>
+						<td>网站扩容</td>
+						<td>面谈</td>
+						<td>
+							<li>对网站架构进行调整、如负载均衡、页面动静分离、Mysql读写分离等</li>
+						</td>
+						<td>
+							<li>费用视复杂度而定</li>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			{% include footer.html %}
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_price").attr("class","pure-menu-selected");
+$("table.pure-table tr:nth-child(even)").addClass("pure-table-odd");
+</script>
+{% include tongji.html %}
+</body>
+</html>

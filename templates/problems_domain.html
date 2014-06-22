@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>域名问题</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+				<h2 class="content-subhead">购买域名</h2>
+				<p>
+				首先，域名是要从域名商处购买的，可以选择国内的域名注册商、也可以选择国外的域名注册商，国内比较知名的域名注册商有
+				<a href="http://www.net.cn/"  target="_blank">万网</a>、<a href="http://www.xinnet.com/"  target="_blank">新网</a>等；
+				国外比较知名的域名供应商<a href="http://www.godaddy.com/"  target="_blank">Godaddy</a>、<a href="http://www.domainsite.com"  target="_blank">domainsite</a>等,
+				如果网站是服务于国内的用户且服务器也在国内，推荐用国内的域名注册商，如果客户群是国外用户建议用国外的域名注册商。
+				因为中国网络的特殊性，如果采用默认的国外域名注册商提供的域名解析服务，国内用户解析该域名会非常慢，反之亦然。
+				</p>
+
+				<h2 class="content-subhead">配置域名解析</h2>
+				<p>
+				域名购买完成，接下来要进行域名解析的配置，我们可以选择利用域名注册商的域名解析服务、也可以选择用其他第三方的域名解析服务，
+				当然您可以自己搭建DNS解析服务器，不过这对于一般网站来说没有必要，也就不多做介绍了。
+				</p>
+				<h3>利用域名注册商的域名解析服务</h3>
+				一般情况下，我们可以直接利用域名注册商的域名解析服务。只需要配置A记录为相关主机的IP即可。
+				具体配置可查看相关域名注册商的帮助文档。下面是万网域名解析的帮助文档。
+				<a href="http://www.net.cn/service/faq/yuming/url/201301/3101.html" target="_blank">http://www.net.cn/service/faq/yuming/url/201301/3101.html</a>
+
+				<h3>选择第三方的域名解析服务</h3>
+				<p>
+				相比直接利用域名注册商的域名解析服务，我们更加推荐选择第三方的域名解析服务<a href="https://www.dnspod.cn/"  target="_blank">DNSPod</a>。
+				DNSPod可以配置多线智能解析，并且解析速度快，防攻击效果好。我们已使用多年，效果很好,非常稳定。
+				</p>
+				</p>
+				使用DNSpod需要修改域名注册商的NS记录为DNSPod的相关机器。下面是DNSPod相关配置的帮助文档。
+				<a href="https://support.dnspod.cn/Kb/showarticle/tsid/177/" target="_blank">https://support.dnspod.cn/Kb/showarticle/tsid/177/</a>
+				</p>
+				
+
+				<h2 class="content-subhead">域名备案</h2>
+				<p>如果您选择的主机在国内，那么是比需要进行域名备案的，如果不进行备案，管局会封掉您的域名，让您的域名无法使用。
+				域名备案可以分为个人和公司两类，备案的方法需要联系您选择的主机商。
+				</p>
+
+				<h2 class="content-subhead">获取ICP运营许可证</h2>
+				<p>如果您的网站用于经营性用途，则必须要办理ICP经营许可证，否则属于违法经营。ICP经营许可证需要公司有100万以上的注册资金，
+				当然您也可以选择挂靠其他公司,使用其他公司的ICP经营许可证，这需要一些费用。</p>
+
+				<h2 class="content-subhead">看不懂!!!</h2>
+				<p>问：你说的我完全看不懂，我只想要自己的网站!!!</p>
+				<p>
+				答：我们鼓励自己动手，丰衣足食，您可以通过自己学习相关技术解决各类问题,当然，如果您想把精力放在主要业务上，这些也可以完全交给我们，
+				直接<a href="/about">联系我们</a>，让我们帮您解决一切！
+				</p>
+			</div>
+           {% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_domain").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>服务介绍</h1>
+		<h2>概述</h2>
+        </div>
+
+        <div class="content">
+        	{% include features_menu.html %}
+        		<div id="cont" style="display:none;">
+
+				<h2 class="content-subhead">概述</h2>
+				<p>
+				如何使网站拥有一个良性而有稳定的运行状态是运维的首要目标。web应用，服务器状态、数据库等的异常都会使最终用户的体验下降，从而影响到网站的收益。
+				因此我们正是从这个首要目标为出发点，多维度的将网站“保护”起来，使网站拥有者不在为网站运行状态分心，全心全意的进行网站管理、经营。
+				</p>
+				<p>	我们提供的服务如下：</p>
+				<li>专业的监控内容体系</li>
+				<li>完善的预警系统</li>
+				<li>网站提供优化解决方案</li>
+				<li>独立电商平台的搭建</li>
+
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_home").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

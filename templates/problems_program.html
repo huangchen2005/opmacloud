@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>程序问题</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+				<h2 class="content-subhead">获取程序</h2>
+				<p>
+				好了，我们已经有了域名了，接下来我们需要网站代码才能运行我们的网站，网站代码怎么获得呢？我们有以下四种途径
+				<li>下载开源代码</li>
+				<li>购买商业代码</li>
+				<li>找外包团队</li>
+				<li>自己动手写代码</li>
+				</p>
+
+				<h3>下载开源代码</h3>
+				<p>
+				下载开源代码是一件经济实惠的事情，当然开源不一定意味着免费，但大多数情况下是免费的。<a href="http://www.oschina.net">开源中国</a>有许多很好的开源项目，
+				可以进行下载使用，不过您需要有一定的技术实力，对相关部署环境比较了解。
+				当然，如果您不了解的话，<a href="/about">联系我们</a>，我们也会为您推荐最适合的开源软件并帮您进行相关部署。<br/>
+
+				</p>
+
+				<h3>购买商业代码</h3>
+				<p>
+				如果开源产品没有适合的产品，您也可以去购买相关的商业代码。
+				</p>
+
+				<h3>找外包团队</h3>
+				<p>如果您的项目定制性比较强，开源代码和商业代码都不符合您的要求，那么您也可以寻找相关的外包团队来获取相关代码。各种威客类网站可以帮您找到合适的外包团队。</p>
+		
+				<h3>自己动手写代码</h3>
+				<p>顾名思义，之所以放在最后是因为如果您要自己动手写代码，大概也不会看我们的介绍了。</p>
+
+				<h2 class="content-subhead">开源产品推荐</h2>
+				<h3>ECSHOP</h3>
+				<p>ECSHOP是一款电商类软件，可以帮您快速搭建自己的电商平台，支持各类的主题模板，通过插件也可以得到android和iphone的客户端,让您轻松拥有自己的电商平台。</p>
+				<p>ECSHOP虽然是开源的，但是团队已经被上海商派收购，如果将ECSHOP用于商业用途，需要一次性缴纳5000元的授权费。当然如果您只是自己玩玩，显然不需要购买授权。</p>
+
+				<h3>WordPress</h3>
+				<p>WordPress是一个个人的开源博客系统，您可以利用它搭建自己的私人博客，它开源免费，安装方便，支持众多的插件和主题，是非常热门的开源博客产品。</p>
+
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_program").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

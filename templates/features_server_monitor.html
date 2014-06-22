@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+    <div id="main">
+        <div class="header">
+		<h1>特色功能</h1>
+		<h2>副标题</h2>
+        </div>
+        <div class="content">
+        	{% include features_menu.html %}
+        	<div id="cont" style="display:none;">
+        		<h2 class="content-subhead">关服务器的各项性能监控</h2>
+				<h3>CPU各项性能监控</h3>
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h4>CPU性能</h4>
+							<p>
+								....... 
+							</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_util.png" alt="Peyto Lake">
+			 			</div>
+			 		</div>
+			 	</div>
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h4>用户态CPU时间</h4>
+							<p>
+								用户态cpu时间反映cpu计算....... 
+							</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_usertime.png" alt="Peyto Lake">
+			 			</div>
+			 		</div>
+			 	</div>
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h4>内核态CPU时间</h4>
+							<p>
+								内核态cpu时间反映cpu计算....... 
+							</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_systime.png" alt="Peyto Lake">
+			 			</div>
+			 		</div>
+			 	</div>
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h4>cpu 负载</h4>
+							<p>
+								用户态cpu时间反映cpu计算....... 
+							</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_load.png" alt="Peyto Lake">
+			 			</div>
+			 		</div>
+			 	</div>
+			 </div>
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script src="/static/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_server").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+    <div id="main">
+        <div class="header">
+		<h1>服务介绍</h1>
+		<h2>专业监控</h2>
+        </div>
+        <div class="content">
+        	{% include features_menu.html %}
+        	<div id="cont" style="display:none;">
+        		<br/>
+        		<p>我们提供了多种监控类型，用于查找系统的瓶颈和监控系统的性能。包括系统监控和应用服务器监控。</p>
+        		<p>系统监控包括CPU监控、内存监控、网络监控、磁盘IO监控等；应用服务器监控包括Nginx监控、PHP监控、Tomcat监控、Mysql监控等。</p>
+
+        		<h2 class="content-subhead">服务器性能监控</h2>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>CPU使用率监控</h3>
+							<p>通过监控CPU使用率变化曲线图，可以监测CPU的使用情况。当用户态CPu使用率较高时，意味着应用程序需要大量CPU开销。当内核态CPU使用率较高时，说明服务器正在花费大量时间进行系统调用或进程调度。如果IOWait使用率较高，则说明大部分CPU时间在等待磁盘IO。这时需要去看下磁盘IO是否有问题</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_util.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>CPU平均负载</h3>
+							<p>CPU平均负载用来反映当前系统的繁忙程度，它反映的是系统中等待队列的进程数。通常情况下，我们认为CPU负载不应该超过CPU核数，但这也不是绝对的，
+							对于一些特殊的应用服务器，即使负载很高也不影响系统的正常工作。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/cpu_load.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>内存使用率</h3>
+							<p>内存使用率曲线图可以观察内存使用的变化情况，通过它我们可以很直观的观察都内存是否够用，是否使用了swap空间等问题，
+							如内存不够用，使用swap空间会导致系统变慢，这时我们就要考虑程序或系统的优化问题。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/mem_use.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>网卡流量监控</h3>
+							<p>通过网卡流量的监控我们可以知道我们的网络流量有多大，带宽是否够用，是否网络带宽成为了我们的系统瓶颈，使用CDN是否有效降低了网络带宽等问题。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/network_traffic.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>磁盘IO监控</h3>
+							<p>磁盘的IO最容易成为系统的瓶颈，因此磁盘IO的监控十分必要，我们的IO监控包括磁盘的读写速度、IOPS监控、IO延迟的监控，可以从各个方面了解磁盘IO是否出现了瓶颈。
+							右图只展示了写磁盘IO的延迟曲线图。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/io_write_ms.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+        		<h2 class="content-subhead">应用层服务监控</h2>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>Nginx性能监控</h3>
+							<p>Nginx监控包括读请求数量(reading)、响应请求数量(writing)和持久链接数量(waiting)。另外还需要对Nginx的吞吐率等指标进行监控，从而发现Nginx是否遇到瓶颈。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/nginx_status.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>php-fpm</h3>
+							<p>需要监控活动进程与空闲进程、监听队列的长度、吞吐率等指标，右图仅显示活动进程与空闲进程。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/php_status.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<h3>Tomcat的JVM内存监控</h3>
+							<p>JVM内存需要监控的东西比较多，Eden区、Survivor区、Tenured区、Perm区等都需要监控、还需要对GC进行监控，右图仅展示了Eden区的监控。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/tomcat_eden.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+
+			 </div>
+			 {% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_monitor").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

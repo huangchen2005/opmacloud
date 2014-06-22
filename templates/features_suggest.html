@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+    <div id="main">
+        <div class="header">
+		<h1>特色功能</h1>
+		<h2>副标题</h2>
+        </div>
+        <div class="content">
+        	{% include features_menu.html %}
+			<h2 class="content-subhead">性能优化建议</h2>
+			<p>
+			我们会监测网站的各方面性能，在系统遇到瓶颈时帮您进行横向扩展，包括负载均衡，数据库的读写分离、CDN加速等等......
+			</p>
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+{% include tongji.html %}
+</body>
+</html>

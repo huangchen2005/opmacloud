@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>运维问题</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+				<h2 class="content-subhead">硬件和网络维护</h2>
+				<p>经过前面的努力，我们的网站终于上线了。但是上线并不意味着一切的结束，我们的网站要时时刻刻为人服务，因此我们就要时刻保证网站的稳定和速度。</p>
+				<p>由于用了云主机，硬件和网络的问题就不用我们操心了，通通交给服务商，我们只需要关心我们自己部署的部分。但是我们也不可以掉以轻心，要做好监控，一旦有问题，随时联系服务商。</p>
+
+				<h2 class="content-subhead">操作系统调优</h2>
+				<p>由于具体的业务不同，操作系统的默认配置很难达到最佳配置，因此我们需要微调操作系统的一些参数用来保障系统处于最优状态。
+				系统参数的调优不可盲目，需要持续监控，发现系统的资源瓶颈，在尝试进行调优。</p>
+
+				<h2 class="content-subhead">应用软件调优</h2>
+				<p>同操作系统调优，也需要不断进行监控，发现瓶颈后在进行调优，切记盲目调优。</p>
+
+				<h2 class="content-subhead">升级维护</h2>
+				<p>系统上线了免不了要进行升级，升级前要做好备份，以便进行升级失败的回滚。最好是写成升级脚本，进行一键升级，避免出错。</p>
+
+				<h2 class="content-subhead">数据备份</h2>
+				<p>一般来说数据库的内容是最重要的，一旦丢失很难恢复，所以我们一定要定期进行数据库备份，当出现不可预估的问题时将损失降低到最小。</p>
+
+				<h2 class="content-subhead">监控</h2>
+				<p>尽管云服务商再三强调自己的稳定性和资源调配合理性，我们还是需要自己的监控。根据我们的实战经验，云服务商很难保证机器资源一直处于最优状态，这就要求我们时刻进行监控。
+				对网站的访问，对机器资源，对应用软件都要设置好监控，这样我们才能及时发现问题并尽快解决问题。此外，只有通过不断监控，我们才能发现系统瓶颈并有针对的进行调优和扩展。</p>
+
+				<h2 class="content-subhead">加速和扩展</h2>
+				<p>如果我们的网站有大量的静态资源，如图片、声音等，我们可以考虑用CDN进行网站加速，这将大大提高用户的访问速率并能减轻我们服务器的压力。</p>
+				<p>如果一台云主机已经无法承载网站的访问，我们还要考虑负载均衡、数据库的读写分离等方案，数据库的横纵向切割等问题，这些问题最好在设计系统时就有所考虑，否则在进行扩展时可能面临很大困难。</p>
+
+				<h2 class="content-subhead">看不懂!!!</h2>
+				<p>问：你说的我完全看不懂，我只想要自己的网站!!!</p>
+				<p>
+				答：我们鼓励自己动手，丰衣足食，您可以通过自己学习相关技术解决各类问题,当然，如果您想把精力放在主要业务上，这些也可以完全交给我们，
+				直接<a href="/about">联系我们</a>，让我们帮您解决一切！
+				</p>
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_op").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

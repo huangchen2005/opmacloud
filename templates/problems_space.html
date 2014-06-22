@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>空间问题</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+				<h2 class="content-subhead">选择空间</h2>
+				<p>好了，域名和代码都准备好了，我们要准备存放代码的空间了。先不要急，在了解有哪些空间可供我们使用之前我们需要先了解下我们的代码需要什么样的环境。</p>
+
+				<p>一般来说，如果您的网站是纯静态的（即只有html文件）那么您只需要空间或是主机提供web服务器即可，web服务器一般可选择nginx或apache。</p>
+				<p>如果您的网站是动态的，如用PHP、Java、Python、Ruby等语言写成，那么您的空间或是主机还需要支持或部署相关的环境才可以。</p>
+
+				<p>我们可以有以下几种方式在存放我们的代码</p>
+				<li>租用VPS</li>
+				<li>租用IDC的机房</li>
+				<li>租用云主机</li>
+
+				<h3>租用VPS</h3>
+				<p>这几种方式里最简单的方式就是租用VPS，可以上万网和新网进行购买。</p>
+				<p>租用VPS最大的好处就在于您不需要进行服务器的相关配置，您也不需要了解web服务器和应用服务器的相关配置，只需要将代码通过ftp上传到相应的VPS上就可以了。
+				简单带来的弊端也是显而易见的。首先，VPS的性能一般都比较差；再者因为没有整台机器的权限，所以我们能做的事情就非常有限，机器和网站的性能监控基本都无法进行。
+				所以，如果不是个人随便玩玩，我们都不建议使用VPS。</p>
+				<p>提示:在选用VPS的时候一定要注意VPS支持的web服务器和应用服务器，如不支持Java，则上传Java的代码无法使用。</p>
+
+				<h3>租用IDC机房</h3>
+				<p>
+				如果我们要对机器拥有绝对的控制权，我们可以购买自己的服务器并租用IDC的机房，将机器放到IDC机房去。在自己的机器上部署web服务器、应用服务器、数据库等。
+				因温度、电力、网络等不稳定因素的存在，不建议将机器放在自己家中。
+				</p>
+				<p>尽管对机器拥有了绝对的控制权，但是租用IDC机房价格很贵，如果是个人或是小公司的话是很难承受的。另外IDC机房的机器维护问题也是很令人头痛的。</p>
+				<p>较好的IDC机房有世纪互联、网宿等。</p>
+
+				<h3>租用云主机</h3>
+				<p>最适合中小企业的解决方案，可以根据需要来选择机器的类型和树木，可以根据业务的不断增长进行扩展，当然我们也拥有对整个云主机的控制权。
+				缺点是物理机我们无法控制，如果物理机出现资源紧张或资源分配不均问题我们很难解决。不过这是可以解决的，我们可以做好机器的各项监控，
+				一旦有问题及时向服务提供商进行反馈。</p>
+				<p>国内的云主机提供商有阿里云、Ucloud，国外的云主机提供商有亚马逊和微软。</p>
+
+				<p>
+				下表汇总了三种存储方式的优劣。
+				</p>
+				<table class="pure-table">
+				<thead>
+					<tr>
+						<th>指标</th>
+						<th>VPS</th>
+						<th>租用IDC</th>
+						<th>租用云主机</t>
+					</tr>
+				</thread>
+
+				<tbody>
+					<tr>
+						<td>价格</td>
+						<td>低</td>
+						<td>高</td>
+						<td>中</td>
+					</tr>
+					<tr>
+						<td>控制权限</td>
+						<td>低</td>
+						<td>高</td>
+						<td>高</td>
+					</tr>
+					<tr>
+						<td>性能</td>
+						<td>低</td>
+						<td>高</td>
+						<td>高</td>
+					</tr>
+					<tr>
+						<td>稳定性</td>
+						<td>低</td>
+						<td>高</td>
+						<td>高</td>
+					</tr>
+					<tr>
+						<td>扩展性</td>
+						<td>低</td>
+						<td>高</td>
+						<td>高</td>
+					</tr>
+					<tr>
+						<td>维护难度</td>
+						<td>低</td>
+						<td>高</td>
+						<td>高</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<p>由上表可以看出租用云主机是一个经济实惠与性能兼顾的选择，因此我们在选择上更倾向于使用云主机，其他两种方式由于性能太差或成本太高基本不予考虑。</p>
+
+				<h2 class="content-subhead">云主机的选择</h2>
+				<p>既然已经选择云主机作为存储介质，那么我们选择哪家的云主机呢，现在市面上常用的国内有阿里云，Ucloud。国外有亚马逊的AWS和微软的Azure。我们如何选择呢？</p>
+				<p>存在即合理，每家的服务都有自己的长处和短处，因此我们在选择的时候就要扬长避短，下面分别进行说明。</p>
+				<p>AWS:应该是最早做云服务的厂商，技术实力雄厚，产品线丰富，稳定性也好，缺点是目前还没有在国内进行部署机房，如果要在国内建站，访问速度不行。</p>
+				<p>Azure:利用Hyper-V的虚拟机技术搭建的云平台，与微软的相关产品契合度高，如果整套系统架构是微软体系可以使用。缺点是对Linux平台的服务支持还不够，
+				没有提供mysql、关系型数据库等服务，另外微软Azure的云主机会每个一段时间进行升级重启，如无法忍受可不考虑。</p>
+				<p>阿里云:国内最大的云厂商，产品线也很丰富，尤其是安全方面做得很不错，缺点是Mysql目前不提供读写分离的功能，大公司有时应对客户反馈比较慢。</p>
+				<p>UCloud:创业型云服务公司，虽然是创业型公司，但是技术实力也很雄厚，云主机的性能很好，产品线也很丰富，对客户的响应也较快。
+				缺点是初创公司，有些技术还需不断完善,网络安全方面与阿里云还有一定差距。</p>
+
+
+
+				<h2 class="content-subhead">看不懂!!!</h2>
+				<p>问：你说的我完全看不懂，我只想要自己的网站!!!</p>
+				<p>
+				答：我们鼓励自己动手，丰衣足食，您可以通过自己学习相关技术解决各类问题,当然，如果您想把精力放在主要业务上，这些也可以完全交给我们，
+				直接<a href="/about">联系我们</a>，让我们帮您解决一切！
+				</p>
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_space").css("background-color","#aaaaaa");
+$("table.pure-table tr:nth-child(even)").addClass("pure-table-odd");
+</script>
+{% include tongji.html %}
+</body>
+</html>

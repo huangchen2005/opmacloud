@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>建站问题</h1>
+		<h2>概述</h2>
+        </div>
+
+        <div class="content">
+        	{% include problems_menu.html %}
+			<div id="cont" style="display:none;">
+        	    <h2 class="content-subhead">您的困扰</h2>
+        	    <p>也许您存在着这样的疑问——我想拥有自己的网站、我该怎么做？</p>
+        	    <p>或许您通过百度、google或是朋友已经得到了近似下边的答案:</p>
+        	    <img class="pure-img-responsive" src="/static/images/baidu_answer.png">
+        	    <p>上图是摘自百度知道的一个答案,还有许多类似的答案，下面我们将这些答案汇总一下。</p>
+        	    <li>网站是通过域名访问的，所以我们需要一个域名</li>
+        	    <li>网站的内容是需要有地方存储的，所以我们需要一个存储的空间</li>
+        	    <li>我们购买的域名和我们存储网站的地方有什么联系呢？当然是通过域名解析将两者关联起来</li>
+        	    <li>众所周知，由于中国大陆对网络管理的特殊性，如果选择存储网站的服务器在国内是要进行域名备案的</li>
+        	    <li>如果是经营性网站还必须办理ICP经营许可证，没有就属于非法经营</li>
+        	    <li>当然，我们还需要网站的程序代码</li>
+        	    <li>将程序代码部署到到我们存储网站的地方</li>
+        	    <li>网站的后期维护、包括弱口令检测、木马的查杀、定期的维护、宕机重启等</li>
+        	    <li>为了使网站运行的更快更好、我们还要对服务器和相关应用软件进行优化</li>
+        	    <li>如果用户量上升，服务器不堪重负，还涉及到网站的升级与扩展问题</li>
+
+				<p>
+				看到这里，如果您是非IT人士，可能已经有些眼花缭乱了，脑海里可能又有了更多了问题,如:
+				</p>
+				<li>域名去哪里购买、如何进行DNS解析的配置、备案和ICP证书是什么东东?如何备案?</li>
+				<li>程序代码从哪里获取？下载还是外包？</li>
+				<li>存储程序的空间都有哪些?都有什么区别？哪家的服务好些？</li>
+				<li>怎么部署程序、都需要那些技能？</li>
+				<li>怎么进行维护、我都需要做哪些事情？</li>
+
+				<p>也许您了解其中的一部分，也许您全部都不了解，没关系，我们会为您慢慢进行介绍，当然如果您不想了解这些，只是想
+				拥有自己的网站，也可以直接联系我们，我们会给您提供一系列最优质的的服务。</p>
+				<p>我们把上述问题简化为五部分问题，分别是</p>
+				<li><a href="/problems/domain">域名问题</a></li>
+				<li><a href="/problems/program">程序问题</a></li>
+				<li><a href="/problems/space">空间问题</a></li>
+				<li><a href="/problems/deployment">部署问题</a></li>
+				<li><a href="/problems/op">维护问题</a></li>
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_problems").attr("class","pure-menu-selected");
+$("#problem_home").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

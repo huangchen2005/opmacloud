@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>服务介绍</h1>
+		<h2>告警通知</h2>
+        </div>
+
+        <div class="content">
+        	{% include features_menu.html %}
+        		<div id="cont" style="display:none;">
+        		<h2 class="content-subhead">告警通知</h2>
+				<p>
+				当您的用户访问不了网站和应用服务的时候，第一时间进行告警以得到相关信息的反馈则是重中之重。随后才能及时有效的进行针对性处理，将网站运营损失降低到最小。
+				我们提供短信以及邮件两种预警方式，可以在最短时间内定位系统瓶颈以便快速进行故障处理。	
+				</p>
+				<p>默认情况下只由我们接收报警信息，出现故障会及时进行处理。当监测出系统出现瓶颈时，我们会及时联系您并提供相应的扩展方案。当然如果您不怕麻烦，我们也可以同时将警报信息发送给您。</p>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<p>邮件报警，关键信息已隐匿。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/mail_alarm.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+				<div class="pure-g-r">			
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<p>短信报警，关键信息已隐匿。</p>
+			 			</div>
+			 		</div>
+					<div class="pure-u-1-2">
+						<div class="l-box">
+							<br />
+			 				<img class="pure-img-responsive" src="/static/images/phone_alarm.png"/>
+			 			</div>
+			 		</div>
+			 	</div>
+
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_alarm").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+   {% include menu.html %}
+
+
+    <div id="main">
+        <div class="header">
+		<h1>服务介绍</h1>
+		<h2>电商搭建</h2>
+        </div>
+
+        <div class="content">
+        	{% include features_menu.html %}
+        		<div id="cont" style="display:none;">
+
+				<h2 class="content-subhead">独立电商平台的搭建</h2>
+				<p>也许您已经有了属于自己的实体销售店、也许您正想拥有一个属于自己的网站但又排斥进驻像淘宝这样的第三方平台——那么我们将会提供您“从无到有”一系列的解决方案。
+				</p>
+				<p>首先先来说说独立网站优势：</p>
+				<li>降低营业成本</li>
+				<li>拥有属于自己的独立域名</li>
+				<li>全方面的宣传自己的产品，更加转移更加专业</li>
+				<li>提供及时的产品以及促销活动信息等</li>
+				<p>我们的优势：</p>
+				<li>前期提供网站的平台搭建服务</li>
+				<li>中期提供网站的运维服务</li>
+				<li>后期提供网站的系统升级服务</li>
+				<p>从网站的建设初期到后期的维护我们可以提供一条龙的服务模式，这样您就不必费力去寻找多方厂商，从而避免了不必要的麻烦。我们会是您的第一选择！</p>
+			</div>
+			{% include footer.html %}
+		</div>
+    </div>
+</div>
+
+<script src="/static/js/ui.js"></script>
+<script type="text/javascript">
+$("#cont").fadeIn(2000);
+$("#menu_features").attr("class","pure-menu-selected");
+$("#features_ec").css("background-color","#aaaaaa");
+</script>
+{% include tongji.html %}
+</body>
+</html>
